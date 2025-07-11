@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-<meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 -->
-<meta name="robots" content="index, follow"> <!-- Permite que os motores de busca indexem a página e sigam os links -->
-<meta name="keywords" content="importante, SEO, otimização, palavras-chave"> <!-- Palavras-chave relevantes -->
-<meta name="description" content="Página importante para SEO, com otimização e estratégias para melhorar o ranqueamento."> <!-- Descrição da página (máximo 160 caracteres) -->
-<meta name="author" content="Seu Nome ou Empresa"> <!-- Nome do autor da página -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade da página em dispositivos móveis -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidade com o Internet Explorer -->
-<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"> <!-- Especifica o tipo de conteúdo que será mostrado nos snippets -->
-    </head>
-    <body>
-        <!--------------redirecionado-->
-        <script>
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 -->
+    <meta name="robots" content="index, follow"> <!-- Permite que os motores de busca indexem a página e sigam os links -->
+    <meta name="keywords" content="SEO, otimização, ranqueamento, palavras-chave"> <!-- Palavras-chave relevantes para SEO -->
+    <meta name="description" content="Página otimizada para SEO, com estratégias e conteúdo relevante para melhorar seu ranqueamento nos motores de busca."> <!-- Descrição da página (máximo 160 caracteres) -->
+    <meta name="author" content="Seu Nome ou Empresa"> <!-- Nome do autor da página -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade em dispositivos móveis -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidade com o Internet Explorer -->
+    
+    <!-- Especifica como os motores de busca devem tratar o conteúdo de snippets, imagens e vídeos -->
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"> 
 
-           const links=[
+    <!-- Título da página -->
+    <title>Otimização de SEO e Estratégias de Ranqueamento</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- CSS (se houver) -->
+    <link rel="stylesheet" href="styles.css"> 
+
+    <!-- Carregar o script de redirecionamento com "defer" para melhorar a performance -->
+    <script defer>
+        // Redirecionamento para um dos links aleatórios
+        const links = [
             "https://filmeseserie.com.br/empresa/",
             "https://espiritosanto-es.com.br/linhadotempovitoria/"
-           ];
-           const mudar=links[Math.floor(Math.random()* links.length)];
-           window.location.href=mudar;
-        </script>  
-         <!--------------redirecionado-->
-    </body>
+        ];
+        const linkSelecionado = links[Math.floor(Math.random() * links.length)];
+        window.location.href = linkSelecionado;
+    </script>
+</head>
+<body>
+    <h1>Redirecionando...</h1> <!-- Mensagem temporária durante o redirecionamento -->
+    <p>Se você não for redirecionado automaticamente, <a href="#" id="manualRedirect">clique aqui</a>.</p>
+
+    <script>
+        // Funcionalidade de redirecionamento manual (caso o redirecionamento automático falhe)
+        document.getElementById("manualRedirect").addEventListener("click", function() {
+            window.location.href = linkSelecionado;
+        });
+    </script>
+</body>
 </html>
